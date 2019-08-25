@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import getSelectedColor from 'Matrix.js'
 export default class Cell extends Component {
   
   constructor(props) {
@@ -8,6 +8,14 @@ export default class Cell extends Component {
       color: this.props.color
     }
   }
+  
+  handleClick = () => {
+    let newColor = this.props.getSelectedColor()
+    this.setState = ({
+      color : newColor
+    })
+  }
+
   
   render() {
     return (
